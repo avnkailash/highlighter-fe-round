@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import NewsItem from './components/NewsItem/NewsItem';
+import NewsList from './components/NewsList/NewsList';
 import News from './components/News/News'
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="App">
       <h1>News List</h1>
-      { !newsFlag && newsList.map((news, index) => <NewsItem news={news} id={index} showNews={showNews}/>)}
+      { !newsFlag && newsList.map((news, index) => <NewsList news={news} key={index} id={index} showNews={showNews}/>)}
       { newsFlag && <News news={newsList[activeNews]} closeNews={closeNews}/>}
 
     </div>
